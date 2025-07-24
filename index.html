@@ -170,31 +170,8 @@
                             <input type="checkbox" name="primary_goals" value="Expand vocabulary" class="form-checkbox h-4 w-4 text-blue-600 rounded">
                             <span class="ml-2 text-sm">Expand vocabulary</span>
                         </label>
-                        <label class="inline-flex items-center text-gray-700">
-                            <input type="checkbox" name="primary_goals" value="Other" id="otherGoalCheckbox" class="form-checkbox h-4 w-4 text-blue-600 rounded">
-                            <span class="ml-2 text-sm">Other (please specify below)</span>
-                        </label>
                     </div>
                 </div>
-                <div id="otherGoalSpecify" class="mb-6 hidden">
-                    <label for="other_goal_text" class="block text-gray-800 text-base font-medium mb-2">If 'Other' was selected for your primary goals, please specify:</label>
-                    <textarea id="other_goal_text" name="other_goal_text" rows="2" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-                </div>
-
-                <script>
-                    // JavaScript to show/hide the 'Other' text area
-                    document.getElementById('otherGoalCheckbox').addEventListener('change', function() {
-                        const otherGoalSpecify = document.getElementById('otherGoalSpecify');
-                        if (this.checked) {
-                            otherGoalSpecify.classList.remove('hidden');
-                            otherGoalSpecify.querySelector('textarea').setAttribute('required', 'required'); // Make required if checked
-                        } else {
-                            otherGoalSpecify.classList.add('hidden');
-                            otherGoalSpecify.querySelector('textarea').removeAttribute('required');
-                            otherGoalSpecify.querySelector('textarea').value = ''; // Clear value if unchecked
-                        }
-                    });
-                </script>
 
                 <!-- Hours per week -->
                 <div class="mb-6">
@@ -318,7 +295,7 @@
                     </div>
                 </div>
 
-                <!-- Preferred Learning Style -->
+                <!-- Preferred Learning Style - Removed "Other" option and its JS -->
                 <div class="mb-6">
                     <label class="block text-gray-800 text-base font-medium mb-2 required-asterisk">What is your preferred learning style? (Select all that apply)</label>
                     <div class="space-y-2">
@@ -345,6 +322,12 @@
                     </div>
                 </div>
 
+                <!-- New: Other concerns/requests -->
+                <div class="mb-6">
+                    <label for="other_concerns_requests" class="block text-gray-800 text-base font-medium mb-2">Other concerns/requests (e.g., specific topics not listed, preferred learning style not covered, or any other notes)</label>
+                    <textarea id="other_concerns_requests" name="other_concerns_requests" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+
                 <!-- Preferred Training Session Times -->
                 <div class="mb-6">
                     <label class="block text-gray-800 text-base font-medium mb-2 required-asterisk">When would you prefer your training sessions to take place? (You can select multiple options)</label>
@@ -353,8 +336,8 @@
                             <thead>
                                 <tr class="bg-gray-100 text-gray-700 text-sm leading-normal">
                                     <th class="py-3 px-6 text-left">Day</th>
-                                    <th class="py-3 px-6 text-center">Morning (9 AM - 12 PM)</th>
-                                    <th class="py-3 px-6 text-center">Afternoon (1 PM - 5 PM)</th>
+                                    <th class="py-3 px-6 text-center">Morning (9 AM - 12 PM) (Special arrangement possible)</th>
+                                    <th class="py-3 px-6 text-center">Afternoon (1 PM - 5 PM) (Special arrangement possible)</th>
                                     <th class="py-3 px-6 text-center">Evening (6 PM - 9 PM)</th>
                                 </tr>
                             </thead>
@@ -390,7 +373,6 @@
                                     <td class="py-3 px-6 text-center"><input type="checkbox" name="time_friday_evening" value="Friday Evening" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
                                 </tr>
                                 <tr class="border-b border-gray-200 hover:bg-gray-50">
-                                    <td class="py-3 px-6 text-left whitespace-nowrap font-medium">Saturday</td>
                                     <td class="py-3 px-6 text-center"><input type="checkbox" name="time_saturday_morning" value="Saturday Morning" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
                                     <td class="py-3 px-6 text-center"><input type="checkbox" name="time_saturday_afternoon" value="Saturday Afternoon" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
                                     <td class="py-3 px-6 text-center"><input type="checkbox" name="time_saturday_evening" value="Saturday Evening" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
@@ -455,4 +437,3 @@
     </div>
 </body>
 </html>
-
