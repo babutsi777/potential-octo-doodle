@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Training Intake Form</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for Inter font and general body styling */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+        }
+        /* Style for required asterisk */
+        .required-asterisk:after {
+            content: " *";
+            color: #ef4444; /* Red color */
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-6 sm:p-8 rounded-lg shadow-xl w-full max-w-3xl border border-gray-200">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-4 text-center">English Training Intake Form</h1>
+        <p class="text-gray-600 mb-8 text-center text-lg">Please help me tailor our English lessons to your specific needs by providing a little background information.</p>
+
+        <!-- The form itself -->
+        <!-- IMPORTANT: Replace "YOUR_FORMSPREE_ENDPOINT" with your actual Formspree endpoint -->
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST" class="space-y-8">
+
+            <!-- Section 1: Privacy & Confidentiality Notice -->
+            <div class="border-b border-gray-200 pb-8">
+                <h2 class="text-2xl font-semibold text-gray-700 mb-4">Privacy & Confidentiality Notice</h2>
+
+                <!-- Data Usage Consent -->
+                <div class="mb-6">
+                    <label class="block text-gray-800 text-lg font-medium mb-3 required-asterisk">Data Usage Consent</label>
+                    <p class="text-gray-600 text-base mb-4">
+                        To provide you with the best possible English language training, I collect and process certain personal information from you (including your name, contact details, professional background, and English learning goals). This information will be used <strong class="font-semibold">solely</strong> for the purpose of planning and delivering your personalized lessons, tracking your progress, and communicating with you about your sessions.
+                    </p>
+                    <p class="text-gray-600 text-base mb-4">
+                        Please indicate your consent regarding the use of your personal data:
+                    </p>
+                    <div class="space-y-2">
+                        <label class="inline-flex items-center text-gray-700">
+                            <input type="radio" name="data_consent" value="I consent" class="form-radio h-5 w-5 text-blue-600 rounded-full" required>
+                            <span class="ml-2 text-base">I consent to my personal data being collected and used by Mr. Lancer for the purpose of English language training as described above.</span>
+                        </label>
+                        <label class="inline-flex items-center text-gray-700">
+                            <input type="radio" name="data_consent" value="I do not consent" class="form-radio h-5 w-5 text-blue-600 rounded-full" required>
+                            <span class="ml-2 text-base">I do not consent to my personal data being collected and used for these purposes. (Please note: Opting out may limit my ability to provide personalized lessons.)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Confidentiality Agreement -->
+                <div>
+                    <label class="block text-gray-800 text-lg font-medium mb-3 required-asterisk">Confidentiality Agreement</label>
+                    <p class="text-gray-600 text-base mb-4">
+                        Your privacy is very important. All information you share with me, including your personal details, learning progress, and discussions during our sessions, will be kept <strong class="font-semibold">strictly confidential</strong>. This information will not be shared with any third parties without your explicit consent, except where required by law. My aim is to create a safe and private learning environment for you.
+                    </p>
+                    <p class="text-gray-600 text-base mb-4">
+                        Please confirm your agreement to this confidentiality statement:
+                    </p>
+                    <div class="space-y-2">
+                        <label class="inline-flex items-center text-gray-700">
+                            <input type="radio" name="confidentiality_agreement" value="I agree" class="form-radio h-5 w-5 text-blue-600 rounded-full" required>
+                            <span class="ml-2 text-base">I agree to the confidentiality statement as described above.</span>
+                        </label>
+                        <label class="inline-flex items-center text-gray-700">
+                            <input type="radio" name="confidentiality_agreement" value="I do not agree" class="form-radio h-5 w-5 text-blue-600 rounded-full" required>
+                            <span class="ml-2 text-base">I do not agree to the confidentiality statement.</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Personal Information -->
+            <div class="border-b border-gray-200 pb-8">
+                <h2 class="text-2xl font-semibold text-gray-700 mb-4">Personal Information</h2>
+
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-800 text-base font-medium mb-2 required-asterisk">Name:</label>
+                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-800 text-base font-medium mb-2 required-asterisk">Email address:</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="whatsapp" class="block text-gray-800 text-base font-medium mb-2">WhatsApp/Contact Number: (Optional)</label>
+                    <input type="text" id="whatsapp" name="whatsapp" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <div class="mb-4">
+                    <label for="affiliation" class="block text-gray-800 text-base font-medium mb-2 required-asterisk">Your Professional Affiliation/Industry: (e.g., "What is your profession or industry?")</label>
+                    <input type="text" id="affiliation" name="affiliation" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+
+                <div>
+                    <label for="company" class="block text-gray-800 text-base font-medium mb-2">Current Company/Organization: (Optional, if relevant)</label>
+                    <input type="text" id="company" name="company" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+            </div>
+
+            <!-- Section 3: English Learning Goals & Needs -->
+            <div class="pb-8">
+                <h2 class="text-2xl font-semibold text-gray-700 mb-4">English Learning Goals & Needs</h2>
+                <p class="text-gray-600 mb-6">Please help me understand your specific motivations and challenges so I can design the most effective and relevant lessons for you.</p>
+
+                <!-- English Proficiency Level (Self-Assessment) -->
+                <div class="mb-6">
+                    <label class="block text-gray-800 text-base font-medium mb-2 required-asterisk">What is your current English proficiency level? (Self-Assessment)</label>
+                    <p class="text-gray-600 text-sm mb-3">To help me understand your starting point, please choose the level that best describes your overall English ability. Don't worry, this is just your honest estimate!</p>
+                    <div class="space-y-2">
+                        <label class="inline-flex items-center text-gray-700">
+                            <input type="radio" name="proficiency_level" value="Beginner (A1/A2)" class="form-radio h-4 w-4 text-blue-600 rounded-full" required>
+                            <span class="ml-2 text-sm">Beginner (A1/A2): Very limited understanding, basic greetings.</span>
+                        </label>
+                        <label class="inline-flex items-center text-gray-700">
+                            <input type="radio" name="proficiency_level" value="Elementary" class="form-radio h-4 w-4 text-blue-600 rounded-full">
+                            <span class="ml-2 text-sm">Elementary: Can handle simple, routine tasks, basic personal info.</span>
+                        </label>
+                        <label class="inline-flex items-center text-gray-700">
+                            <input type="radio" name="proficiency_level" value="Intermediate" class="form-radio h-4 w-4 text-blue-600 rounded-full">
+                            <span class="ml-2 text-sm">Intermediate: Can understand main points, produce simple connected text.</span>
+                        </label>
+                        <label class="inline-flex items-center text-gray-700">
+                            <input type="radio" name="proficiency_level" value="Upper-Intermediate" class="form-radio h-4 w-4 text-blue-600 rounded-full">
+                            <span class="ml-2 text-sm">Upper-Intermediate: Can understand complex texts, express fluently with some errors.</span>
+                        </label>
+                        <label class="inline-flex items-center text-gray-700">
+                            <input type="radio" name="proficiency_level" value="Advanced" class="form-radio h-4 w-4 text-blue-600 rounded-full">
+                            <span class="ml-2 text-sm">Advanced: Near-native fluency, can understand nuance.</span>
+                        </label>
+                        <label class="inline-flex items-center text-gray-700">
+                            <input type="radio" name="proficiency_level" value="Proficient" class="form-radio h-4 w-4 text-blue-600 rounded-full">
+                            <span class="ml-2 text-sm">Proficient: Native-like command, complete mastery.</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Primary Goals for English Training -->
+                <div class="mb-6">
+                    <label class="block text-gray-800 text-base font-medium mb-2 required-asterisk">What are your primary goals for English training? (Select all that apply)</label>
+                    <div class="space-y-2">
+                        <label class="inline-flex items-center text-gray-700">
+                            <input type="checkbox" name="primary_goals" value="Improve general conversation skills" class="form-checkbox h-4 w-4 text-blue-600 rounded">
+                            <span class="ml-2 text-sm">Improve general conversation skills</span>
+                        </label>
+                        <label class="inline-flex items-center text-gray-700">
+                            <input type="checkbox" name="primary_goals" value="Prepare for an English proficiency exam (e.g., IELTS, TOEFL)" class="form-checkbox h-4 w-4 text-blue-600 rounded">
+                            <span class="ml-2 text-sm">Prepare for an English proficiency exam (e.g., IELTS, TOEFL)</span>
+                        </label>
+                        <label class="inline-flex items-center text-gray-700">
+                            <input type="checkbox" name="primary_goals" value="Enhance business English communication" class="form-checkbox h-4 w-4 text-blue-600 rounded">
+                            <span class="ml-2 text-sm">Enhance business English communication</span>
+                        </label>
+                        <label class="inline-flex items-center text-gray-700">
+                            <input type="checkbox" name="primary_goals" value="Improve academic writing skills" class="form-checkbox h-4 w-4 text-blue-600 rounded">
+                            <span class="ml-2 text-sm">Improve academic writing skills</span>
+                        </label>
+                        <label class="inline-flex items-center text-gray-700">
+                            <input type="checkbox" name="primary_goals" value="Focus on pronunciation" class="form-checkbox h-4 w-4 text-blue-600 rounded">
+                            <span class="ml-2 text-sm">Focus on pronunciation</span>
+                        </label>
+                        <label class="inline-flex items-center text-gray-700">
+                            <input type="checkbox" name="primary_goals" value="Expand vocabulary" class="form-checkbox h-4 w-4 text-blue-600 rounded">
+                            <span class="ml-2 text-sm">Expand vocabulary</span>
+                        </label>
+                        <label class="inline-flex items-center text-gray-700">
+                            <input type="checkbox" name="primary_goals" value="Other" id="otherGoalCheckbox" class="form-checkbox h-4 w-4 text-blue-600 rounded">
+                            <span class="ml-2 text-sm">Other (please specify below)</span>
+                        </label>
+                    </div>
+                </div>
+                <div id="otherGoalSpecify" class="mb-6 hidden">
+                    <label for="other_goal_text" class="block text-gray-800 text-base font-medium mb-2">If 'Other' was selected for your primary goals, please specify:</label>
+                    <textarea id="other_goal_text" name="other_goal_text" rows="2" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+
+                <script>
+                    // JavaScript to show/hide the 'Other' text area
+                    document.getElementById('otherGoalCheckbox').addEventListener('change', function() {
+                        const otherGoalSpecify = document.getElementById('otherGoalSpecify');
+                        if (this.checked) {
+                            otherGoalSpecify.classList.remove('hidden');
+                            otherGoalSpecify.querySelector('textarea').setAttribute('required', 'required'); // Make required if checked
+                        } else {
+                            otherGoalSpecify.classList.add('hidden');
+                            otherGoalSpecify.querySelector('textarea').removeAttribute('required');
+                            otherGoalSpecify.querySelector('textarea').value = ''; // Clear value if unchecked
+                        }
+                    });
+                </script>
+
+                <!-- Hours per week -->
+                <div class="mb-6">
+                    <label for="hours_per_week" class="block text-gray-800 text-base font-medium mb-2 required-asterisk">How many hours per week are you willing to dedicate to English training? (Including self-study and class time)</label>
+                    <input type="number" id="hours_per_week" name="hours_per_week" min="1" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+
+                <!-- Specific Areas of English Focus -->
+                <div class="mb-6">
+                    <label class="block text-gray-800 text-base font-medium mb-2 required-asterisk">Are there any specific areas of English you would like to focus on?</label>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white rounded-lg shadow-sm">
+                            <thead>
+                                <tr class="bg-gray-100 text-gray-700 text-sm leading-normal">
+                                    <th class="py-3 px-6 text-left">Area</th>
+                                    <th class="py-3 px-6 text-center">High Focus</th>
+                                    <th class="py-3 px-6 text-center">Moderate Focus</th>
+                                    <th class="py-3 px-6 text-center">Low Focus</th>
+                                    <th class="py-3 px-6 text-center">No Focus</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-600 text-sm font-light">
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap font-medium">Grammar</td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="focus_grammar" value="High Focus" class="form-radio h-4 w-4 text-blue-600 rounded-full" required></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="focus_grammar" value="Moderate Focus" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="focus_grammar" value="Low Focus" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="focus_grammar" value="No Focus" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap font-medium">Speaking</td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="focus_speaking" value="High Focus" class="form-radio h-4 w-4 text-blue-600 rounded-full" required></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="focus_speaking" value="Moderate Focus" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="focus_speaking" value="Low Focus" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="focus_speaking" value="No Focus" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap font-medium">Listening</td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="focus_listening" value="High Focus" class="form-radio h-4 w-4 text-blue-600 rounded-full" required></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="focus_listening" value="Moderate Focus" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="focus_listening" value="Low Focus" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="focus_listening" value="No Focus" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap font-medium">Reading</td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="focus_reading" value="High Focus" class="form-radio h-4 w-4 text-blue-600 rounded-full" required></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="focus_reading" value="Moderate Focus" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="focus_reading" value="Low Focus" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="focus_reading" value="No Focus" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap font-medium">Writing</td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="focus_writing" value="High Focus" class="form-radio h-4 w-4 text-blue-600 rounded-full" required></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="focus_writing" value="Moderate Focus" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="focus_writing" value="Low Focus" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="focus_writing" value="No Focus" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Confidence in Speaking English -->
+                <div class="mb-6">
+                    <label class="block text-gray-800 text-base font-medium mb-2 required-asterisk">How would you rate your confidence in speaking English in various situations?</label>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white rounded-lg shadow-sm">
+                            <thead>
+                                <tr class="bg-gray-100 text-gray-700 text-sm leading-normal">
+                                    <th class="py-3 px-6 text-left">Situation</th>
+                                    <th class="py-3 px-6 text-center">Very Confident</th>
+                                    <th class="py-3 px-6 text-center">Confident</th>
+                                    <th class="py-3 px-6 text-center">Neutral</th>
+                                    <th class="py-3 px-6 text-center">Slightly Unconfident</th>
+                                    <th class="py-3 px-6 text-center">Very Unconfident</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-600 text-sm font-light">
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap font-medium">Casual Conversations</td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_casual" value="Very Confident" class="form-radio h-4 w-4 text-blue-600 rounded-full" required></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_casual" value="Confident" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_casual" value="Neutral" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_casual" value="Slightly Unconfident" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_casual" value="Very Unconfident" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap font-medium">Work Meetings</td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_work_meetings" value="Very Confident" class="form-radio h-4 w-4 text-blue-600 rounded-full" required></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_work_meetings" value="Confident" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_work_meetings" value="Neutral" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_work_meetings" value="Slightly Unconfident" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_work_meetings" value="Very Unconfident" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap font-medium">Ordering food/drinks</td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_ordering_food" value="Very Confident" class="form-radio h-4 w-4 text-blue-600 rounded-full" required></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_ordering_food" value="Confident" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_ordering_food" value="Neutral" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_ordering_food" value="Slightly Unconfident" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_ordering_food" value="Very Unconfident" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap font-medium">Asking for directions</td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_asking_directions" value="Very Confident" class="form-radio h-4 w-4 text-blue-600 rounded-full" required></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_asking_directions" value="Confident" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_asking_directions" value="Neutral" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_asking_directions" value="Slightly Unconfident" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_asking_directions" value="Very Unconfident" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap font-medium">Participating in discussions/presentations</td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_discussions" value="Very Confident" class="form-radio h-4 w-4 text-blue-600 rounded-full" required></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_discussions" value="Confident" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_discussions" value="Neutral" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_discussions" value="Slightly Unconfident" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                    <td class="py-3 px-6 text-center"><input type="radio" name="confidence_discussions" value="Very Unconfident" class="form-radio h-4 w-4 text-blue-600 rounded-full"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Preferred Learning Style -->
+                <div class="mb-6">
+                    <label class="block text-gray-800 text-base font-medium mb-2 required-asterisk">What is your preferred learning style? (Select all that apply)</label>
+                    <div class="space-y-2">
+                        <label class="inline-flex items-center text-gray-700">
+                            <input type="checkbox" name="learning_style" value="Individual one-on-one sessions" class="form-checkbox h-4 w-4 text-blue-600 rounded">
+                            <span class="ml-2 text-sm">Individual one-on-one sessions</span>
+                        </label>
+                        <label class="inline-flex items-center text-gray-700">
+                            <input type="checkbox" name="learning_style" value="Group classes" class="form-checkbox h-4 w-4 text-blue-600 rounded">
+                            <span class="ml-2 text-sm">Group classes</span>
+                        </label>
+                        <label class="inline-flex items-center text-gray-700">
+                            <input type="checkbox" name="learning_style" value="Self-study with guidance" class="form-checkbox h-4 w-4 text-blue-600 rounded">
+                            <span class="ml-2 text-sm">Self-study with guidance</span>
+                        </label>
+                        <label class="inline-flex items-center text-gray-700">
+                            <input type="checkbox" name="learning_style" value="Online learning platforms" class="form-checkbox h-4 w-4 text-blue-600 rounded">
+                            <span class="ml-2 text-sm">Online learning platforms</span>
+                        </label>
+                        <label class="inline-flex items-center text-gray-700">
+                            <input type="checkbox" name="learning_style" value="In-person classes" class="form-checkbox h-4 w-4 text-blue-600 rounded">
+                            <span class="ml-2 text-sm">In-person classes (Note: My primary offering is online via Zoom)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Preferred Training Session Times -->
+                <div class="mb-6">
+                    <label class="block text-gray-800 text-base font-medium mb-2 required-asterisk">When would you prefer your training sessions to take place? (You can select multiple options)</label>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white rounded-lg shadow-sm">
+                            <thead>
+                                <tr class="bg-gray-100 text-gray-700 text-sm leading-normal">
+                                    <th class="py-3 px-6 text-left">Day</th>
+                                    <th class="py-3 px-6 text-center">Morning (9 AM - 12 PM)</th>
+                                    <th class="py-3 px-6 text-center">Afternoon (1 PM - 5 PM)</th>
+                                    <th class="py-3 px-6 text-center">Evening (6 PM - 9 PM)</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-600 text-sm font-light">
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap font-medium">Monday</td>
+                                    <td class="py-3 px-6 text-center"><input type="checkbox" name="time_monday_morning" value="Monday Morning" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
+                                    <td class="py-3 px-6 text-center"><input type="checkbox" name="time_monday_afternoon" value="Monday Afternoon" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
+                                    <td class="py-3 px-6 text-center"><input type="checkbox" name="time_monday_evening" value="Monday Evening" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap font-medium">Tuesday</td>
+                                    <td class="py-3 px-6 text-center"><input type="checkbox" name="time_tuesday_morning" value="Tuesday Morning" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
+                                    <td class="py-3 px-6 text-center"><input type="checkbox" name="time_tuesday_afternoon" value="Tuesday Afternoon" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
+                                    <td class="py-3 px-6 text-center"><input type="checkbox" name="time_tuesday_evening" value="Tuesday Evening" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap font-medium">Wednesday</td>
+                                    <td class="py-3 px-6 text-center"><input type="checkbox" name="time_wednesday_morning" value="Wednesday Morning" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
+                                    <td class="py-3 px-6 text-center"><input type="checkbox" name="time_wednesday_afternoon" value="Wednesday Afternoon" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
+                                    <td class="py-3 px-6 text-center"><input type="checkbox" name="time_wednesday_evening" value="Wednesday Evening" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap font-medium">Thursday</td>
+                                    <td class="py-3 px-6 text-center"><input type="checkbox" name="time_thursday_morning" value="Thursday Morning" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
+                                    <td class="py-3 px-6 text-center"><input type="checkbox" name="time_thursday_afternoon" value="Thursday Afternoon" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
+                                    <td class="py-3 px-6 text-center"><input type="checkbox" name="time_thursday_evening" value="Thursday Evening" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap font-medium">Friday</td>
+                                    <td class="py-3 px-6 text-center"><input type="checkbox" name="time_friday_morning" value="Friday Morning" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
+                                    <td class="py-3 px-6 text-center"><input type="checkbox" name="time_friday_afternoon" value="Friday Afternoon" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
+                                    <td class="py-3 px-6 text-center"><input type="checkbox" name="time_friday_evening" value="Friday Evening" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-50">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap font-medium">Saturday</td>
+                                    <td class="py-3 px-6 text-center"><input type="checkbox" name="time_saturday_morning" value="Saturday Morning" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
+                                    <td class="py-3 px-6 text-center"><input type="checkbox" name="time_saturday_afternoon" value="Saturday Afternoon" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
+                                    <td class="py-3 px-6 text-center"><input type="checkbox" name="time_saturday_evening" value="Saturday Evening" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap font-medium">Sunday</td>
+                                    <td class="py-3 px-6 text-center"><input type="checkbox" name="time_sunday_morning" value="Sunday Morning" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
+                                    <td class="py-3 px-6 text-center"><input type="checkbox" name="time_sunday_afternoon" value="Sunday Afternoon" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
+                                    <td class="py-3 px-6 text-center"><input type="checkbox" name="time_sunday_evening" value="Sunday Evening" class="form-checkbox h-4 w-4 text-blue-600 rounded"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Prior Experience -->
+                <div class="mb-6">
+                    <label for="prior_experience" class="block text-gray-800 text-base font-medium mb-2 required-asterisk">Do you have any prior experience with English training or courses? If so, please briefly describe.</label>
+                    <textarea id="prior_experience" name="prior_experience" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                </div>
+
+                <!-- Preferred Start Date -->
+                <div class="mb-6">
+                    <label for="start_date" class="block text-gray-800 text-base font-medium mb-2 required-asterisk">What is your preferred start date for the training?</label>
+                    <input type="date" id="start_date" name="start_date" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+
+                <!-- Importance of Native Speaker -->
+                <div class="mb-6">
+                    <label class="block text-gray-800 text-base font-medium mb-2 required-asterisk">How important is it for your trainer to be a native English speaker?</label>
+                    <div class="flex justify-between items-center mt-2 text-gray-700 text-sm">
+                        <span>Not Important At All</span>
+                        <div class="flex space-x-4">
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="native_speaker_importance" value="1" class="form-radio h-4 w-4 text-blue-600 rounded-full" required>
+                                <span class="ml-1">1</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="native_speaker_importance" value="2" class="form-radio h-4 w-4 text-blue-600 rounded-full">
+                                <span class="ml-1">2</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="native_speaker_importance" value="3" class="form-radio h-4 w-4 text-blue-600 rounded-full">
+                                <span class="ml-1">3</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="native_speaker_importance" value="4" class="form-radio h-4 w-4 text-blue-600 rounded-full">
+                                <span class="ml-1">4</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="radio" name="native_speaker_importance" value="5" class="form-radio h-4 w-4 text-blue-600 rounded-full">
+                                <span class="ml-1">5</span>
+                            </label>
+                        </div>
+                        <span>Extremely Important</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-md hover:bg-blue-700 transition duration-300 ease-in-out shadow-lg">Submit Form</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
